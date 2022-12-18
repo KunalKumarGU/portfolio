@@ -1,0 +1,304 @@
+/* colors used  #101820ff black #FEE715FF yellow*/
+
+body {
+  background-color: #101820ff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* overflow: hidden; */
+}
+
+body::-webkit-scrollbar {
+  width: 0 !important;
+}
+
+/* Name */
+
+#root {
+  position: relative;
+  padding: 30px;
+  background-color: transparent;
+  overflow: hidden;
+  animation: textanimation 2s ease-in-out infinite;
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 100px;
+}
+
+#top {
+  position: absolute;
+  height: 10px;
+  width: 600px;
+  background-color: white;
+  top: 0px;
+  left: -10px;
+  animation: bottom 2s ease-in-out infinite;
+}
+
+#bottom {
+  position: absolute;
+  height: 10px;
+  width: 600px;
+  background-color: white;
+  top: 190px;
+  left: -10px;
+  animation: bottom 2s ease-in-out infinite;
+}
+
+#rightTop {
+  position: absolute;
+  height: 100px;
+  width: 10px;
+  background-color: white;
+  top: 0px;
+  left: 575px;
+  animation: rightTop 2s ease-in-out infinite;
+}
+
+#rightBottom {
+  position: absolute;
+  height: 100px;
+  width: 10px;
+  background-color: white;
+  display: block;
+  top: 100px;
+  left: 575px;
+  animation: rightBottom 2s ease-in-out infinite;
+  z-index: -1;
+}
+
+#middle {
+  position: absolute;
+  height: 10px;
+  width: 600px;
+  background-color: white;
+  top: 95px;
+  left: -10px;
+  animation: middle 2s ease-in-out infinite;
+}
+
+/* HeroSection design */
+
+#hero {
+  transition: all 1s;
+  color: white;
+  opacity: 0;
+  margin-top: -50px;
+  font-size: 35px;
+  display: none;
+  /* transform: translateX(-100%); */
+  place-items: center;
+  align-content: center;
+  height: 100vh;
+}
+
+/* Scroll visibility */
+
+.enableFunctionality {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 1s;
+  transform: translateX(-100%);
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+.section:nth-child(2) {
+  transition-delay: 50ms;
+}
+
+.section:nth-child(3) {
+  transition-delay: 100ms;
+}
+
+.section:nth-child(4) {
+  transition-delay: 150ms;
+}
+
+.section:nth-child(5) {
+  transition-delay: 200ms;
+}
+
+.section:nth-child(6) {
+  transition-delay: 250ms;
+}
+
+.section:nth-child(7) {
+  transition-delay: 300ms;
+}
+
+.section:nth-child(8) {
+  transition-delay: 350ms;
+}
+
+/* other designs */
+
+h1 {
+  margin-top: -100px;
+  font-size: 50px;
+  color: white;
+}
+
+.para {
+  color: white;
+  font-size: 17px;
+  margin: 0;
+  padding: 5px;
+}
+
+/* Animations */
+
+@keyframes middle {
+  0% {
+    background-color: transparent;
+    left: -10px;
+    width: 10px;
+    z-index: 10;
+  }
+  1% {
+    background-color: white;
+    left: -10px;
+    width: 10px;
+  }
+  17.5% {
+    background-color: white;
+    width: 560px;
+  }
+  25% {
+    left: 575px;
+    background-color: white;
+  }
+  30% {
+    background-color: #101820ff;
+    z-index: -1;
+  }
+  100% {
+    background-color: #101820ff;
+    z-index: -1;
+  }
+}
+
+@keyframes rightTop {
+  0% {
+    left: 575px;
+    height: 10px;
+    background-color: transparent;
+  }
+  24.9% {
+    background-color: transparent;
+  }
+  25% {
+    background-color: white;
+    height: 10px;
+    top: 95px;
+  }
+  42.5% {
+    top: 0px;
+    height: 100px;
+    background-color: white;
+  }
+  50% {
+    height: 10px;
+    background-color: white;
+  }
+  55% {
+    height: 10px;
+    background-color: #101820ff;
+  }
+  100% {
+    background-color: #101820ff;
+  }
+}
+
+@keyframes rightBottom {
+  0% {
+    left: 575px;
+    height: 10px;
+    background-color: transparent;
+  }
+  24.9% {
+    background-color: transparent;
+  }
+  25% {
+    background-color: white;
+    height: 10px;
+    top: 95px;
+  }
+  42.5% {
+    top: 100px;
+    height: 100px;
+    background-color: white;
+  }
+  50% {
+    top: 200px;
+    height: 10px;
+    background-color: white;
+  }
+  55% {
+    height: 10px;
+    background-color: #101820ff;
+  }
+  100% {
+    background-color: #101820ff;
+  }
+}
+
+@keyframes bottom {
+  0% {
+    background-color: transparent;
+    left: 575px;
+    width: 10px;
+  }
+  49.9% {
+    background-color: transparent;
+  }
+  50% {
+    left: 575px;
+    width: 10px;
+    background-color: white;
+  }
+  67.5% {
+    width: 600px;
+  }
+  75% {
+    left: 0px;
+    width: 10px;
+    background-color: white;
+  }
+  75.1% {
+    background-color: #101820ff;
+  }
+  100% {
+    background-color: #101820ff;
+  }
+}
+
+@keyframes textanimation {
+  0% {
+    background-color: transparent;
+    color: transparent;
+  }
+  49.5% {
+    /* color: transparent; */
+  }
+  50% {
+    color: white;
+    /* background-color: #fee715ff; */
+  }
+  100% {
+    color: transparent;
+  }
+}
